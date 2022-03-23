@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" href="logo.svg" type="image/icon type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="bgColor">
+    <main class="wrapper">
+      <header class="flex">
+        <h1>Css Generator</h1>
+      </header>
+      <nav class="flex navSection">
+        <h2>Button Style</h2>
+      </nav>
+      <nav class="flex navSection active">
+        <h2>Gradient Style</h2>
+      </nav>
+      <nav class="flex navSection">
+        <h2>Text Style</h2>
+      </nav>
+      <section class="flex borderB">
+        <div class="content">
+          <div id="buttonWrapper">
+            <button class="designBtn">Click</button>
+          </div>
+          <div id="setButtonWrapper">
+            <div class="btnContent">
+              <div class="flexSet padSet">
+                <div class="inline">
+                  <label for="bpl">Padding left</label>
+                  <input
+                    type="range"
+                    min="5"
+                    max="200"
+                    value="20"
+                    class="paddingLeft"
+                    id="bpl"
+                  />
+                </div>
+
+                <div class="inline">
+                  <label for="bpr">Padding right</label>
+                  <input
+                    type="range"
+                    min="5"
+                    max="200"
+                    value="20"
+                    class="paddingRight"
+                    id="bpr"
+                  />
+                </div>
+
+                <div class="inline">
+                  <label for="bpt">Padding top</label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="60"
+                    value="8"
+                    class="paddingTop"
+                    id="bpt"
+                  />
+                </div>
+
+                <div class="inline">
+                  <label for="bpb">Padding bottom</label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="60"
+                    value="8"
+                    class="paddingBottom"
+                    id="bpb"
+                  />
+                </div>
+              </div>
+              <div class="flexSet textSet">
+                <h3>Change text</h3>
+                <div class="flexInline">
+                  <div class="gridLabel">
+                    <label for="btt">Text</label>
+                    <input type="text" value="Click" class="textBtn" id="btt" />
+                  </div>
+                  <div class="gridLabel">
+                    <label for="btc">Text Color</label>
+                    <input
+                      type="color"
+                      value="#602f40"
+                      class="colorBtnText"
+                      id="btc"
+                    />
+                  </div>
+                  <div class="gridLabel">
+                    <label for="bts">Font Size</label>
+                    <input
+                      type="range"
+                      min="10"
+                      max="100"
+                      value="18"
+                      class="fontBtn"
+                      id="bts"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="flexSet bgSet">
+                <h3>Change background</h3>
+                <div class="flexInline centerLabel">
+                  <div class="flexSet">
+                    <input
+                      type="radio"
+                      class="option1"
+                      name="radio"
+                      id="bbg"
+                      checked
+                    />
+                    <label for="bbg">Gradient</label>
+
+                    <div class="inline">
+                      <input
+                        type="color"
+                        value="#eba8f0"
+                        class="firstBtnColor"
+                      />
+                      <input
+                        type="color"
+                        value="#eedd87"
+                        class="secondBtnColor"
+                      />
+                    </div>
+
+                    <input
+                      type="range"
+                      min="0"
+                      max="180"
+                      value="1"
+                      id="degBtn"
+                    />
+                  </div>
+                  <div class="flexSet">
+                    <input type="radio" class="option2" name="radio" id="bbs" />
+                    <label for="bbs">Solid</label>
+                    <input type="color" value="#726cd0" class="colorBtn" />
+                  </div>
+
+                  <div class="flexSet">
+                    <input type="radio" class="option3" name="radio" id="bbt" />
+                    <label for="bbt">Transparent</label>
+                  </div>
+                </div>
+              </div>
+              <div class="flexSet bordSet extraPad">
+                <label for="bb" class="titleWeight">Border</label>
+                <input
+                  type="checkbox"
+                  class="optionBorder"
+                  checked="checked"
+                  id="bb"
+                />
+                <label for="bbc">Color</label>
+                <input
+                  type="color"
+                  value="#000000"
+                  class="colorBtnBorder"
+                  id="bbc"
+                />
+                <label for="bbts">Thickness</label>
+                <input
+                  type="range"
+                  min="0"
+                  max="10"
+                  value="1"
+                  class="borderThickBtn"
+                  id="bbts"
+                />
+                <label for="bbrs">Border radius</label>
+                <input
+                  type="range"
+                  min="0"
+                  max="30"
+                  value="10"
+                  class="borderRadiusBtn"
+                  id="bbrs"
+                />
+                <label for="borderStyle">Border style</label>
+                <div class="select">
+                  <select name="borderStyle" id="borderStyle">
+                    <option value="solid">Solid</option>
+                    <option value="dotted">Dotted</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="double">Double</option>
+                    <option value="groove">Groove</option>
+                    <option value="ridge">Ridge</option>
+                    <option value="inset">Inset</option>
+                    <option value="outset">Outset</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flexSet shadSet extraPad">
+                <label for="bs" class="titleWeight">Shadow</label>
+                <input type="checkbox" class="optionShadow" id="bs" />
+                <label for="bsc">Color</label>
+                <input
+                  type="color"
+                  value="#000000"
+                  class="colorBtnShadow"
+                  id="bsc"
+                />
+                <label for="bssd">Spread</label>
+                <input
+                  type="range"
+                  min="0"
+                  max="30"
+                  value="5"
+                  class="shadowSpreadBtn"
+                  id="bssd"
+                />
+                <label for="bsy">Offset-y</label>
+                <input
+                  type="range"
+                  min="-15"
+                  max="15"
+                  value="0"
+                  class="topShadowBtn"
+                  id="bsy"
+                />
+                <label for="bsx">Offset-x</label>
+                <input
+                  type="range"
+                  min="-15"
+                  max="15"
+                  value="0"
+                  class="leftShadowBtn"
+                  id="bsx"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content active">
+          <div id="gradientWrapper">
+            <div class="grSec">
+              <div id="colorWrapper">
+                <input
+                  type="color"
+                  value="#726cd0"
+                  class="colorInput"
+                  id="color1"
+                />
+                <input
+                  type="color"
+                  value="#0fb8ad"
+                  class="colorInput"
+                  id="color2"
+                />
+              </div>
+            </div>
+            <div class="grSec">
+              <button type="button" onclick="addColor()" class="addNewColor">
+                &#43;
+              </button>
+              <button
+                type="button"
+                onclick="removeColor()"
+                class="removeColor"
+                id="color2"
+              >
+                &#8722;
+              </button>
+            </div>
+            <div class="grSec">
+              <div class="gridLabel grDg">
+                <label for="degrees">Gradient direction</label>
+                <input type="range" min="0" max="180" value="1" id="degrees" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div id="textWrapper">
+            <div class="textContentWrapper">
+              <div class="textWindow">
+                <p class="pChange">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                  consequuntur magni dolores eos qui ratione voluptatem sequi
+                  nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+                  dolor sit amet, consectetur, adipisci velit.
+                </p>
+              </div>
+            </div>
+            <div class="textContentWrapper w-100">
+              <div class="txtSettings">
+                <h3>Change text</h3>
+                <div class="gridLabel">
+                  <label for="tc">Color</label>
+                  <input
+                    type="color"
+                    value="#000000"
+                    class="txtColor"
+                    id="tc"
+                  />
+                </div>
+                <div class="gridLabel">
+                  <label for="tlh">Line height</label>
+                  <input
+                    type="range"
+                    min="1"
+                    max="2"
+                    value="1.3"
+                    step="0.05"
+                    class="txtLineHeight"
+                    id="tlh"
+                  />
+                </div>
+                <div class="gridLabel">
+                  <label for="tls">Letter spacing</label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    value="0"
+                    class="txtSpacing"
+                    id="tls"
+                  />
+                </div>
+                <div class="gridLabel">
+                  <label for="tws">Word spacing</label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    value="0"
+                    class="wordSpacing"
+                    id="tws"
+                  />
+                </div>
+                <label for="textAlign">Text align</label>
+                <div class="select">
+                  <select name="textAlign" id="textAlign">
+                    <option value="left">Left</option>
+                    <option value="center">Center</option>
+                    <option value="right">Right</option>
+                    <option value="justify">Justify</option>
+                  </select>
+                </div>
+
+                <label for="textTransform">Text transform</label>
+                <div class="select">
+                  <select name="textTransform" id="textTransform">
+                    <option value="none">None</option>
+                    <option value="capitalize">Capitalize</option>
+                    <option value="uppercase">Uppercase</option>
+                    <option value="lowercase">Lowercase</option>
+                  </select>
+                </div>
+
+                <label for="textDecoration">Text decoration</label>
+                <div class="select">
+                  <select name="textDecoration" id="textDecoration">
+                    <option value="none">None</option>
+                    <option value="underline">Underline</option>
+                    <option value="overline">Overline</option>
+                    <option value="lineThrough">Line Through</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <article class="flex relative">
+        <div class="cssTag">
+          <h3 class="css">Css</h3>
+          <h3 class="copy">&#9112;</h3>
+        </div>
+
+        <h3 class="absolute codeButton"></h3>
+        <h3 class="absolute codeGradient active"></h3>
+        <h3 class="absolute codeText"></h3>
+      </article>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
